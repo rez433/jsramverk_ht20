@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16, 18]
-        mongodb-version: ['4.4', '5.0', '6.0']
+        mongodb-version: ['5.0', '6.0']
 
     steps:
     - uses: actions/checkout@v3
@@ -25,8 +25,8 @@ jobs:
       uses: supercharge/mongodb-github-action@1.7.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
-        mongodb-replica-set: test-rs
-        mongodb-port: 42069
+        mongodb-root-username: admin
+        mongodb-root-password: admin
   
   
     - run: npm install
