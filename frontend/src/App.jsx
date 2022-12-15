@@ -7,7 +7,8 @@ import Register from './pages/Register'
 function App() {
   return (
     <>
-      <Router basename='/~rere20/editor/'>
+      {/* <Router basename=process.env.BASENAME> */}
+      <Router>
         <div className='container'>
           <Header />
           {/* some */}

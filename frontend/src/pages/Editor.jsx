@@ -9,7 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Editor() {
     // const user = null;
-    const url = 'https://jsramverk-editor-rere20.azurewebsites.net/';
+    // const url = 'https://jsramverk-editor-rere20.azurewebsites.net/';
+    const url = 'http://localhost:5000';
+
 
     const _id = useParams();
     const [title, setTitle] = useState();
