@@ -5,17 +5,17 @@ const Doc = require('../models/Docmnt');
 const {app} = require("../app");
 
 
-/* Connecting to the database before each test. */
-beforeEach( async () =>
-{
-    await mongoose.connect( process.env.MONGO_URI );
-});
+// /* Connecting to the database before each test. */
+// beforeEach( async () =>
+// {
+//     await mongoose.connect( process.env.MONGO_URI );
+// });
 
-/* Closing database connection after each test. */
-afterEach( async () =>
-{
-    await mongoose.connection.close();
-} );
+// /* Closing database connection after each test. */
+// afterEach( async () =>
+// {
+//     await mongoose.connection.close();
+// } );
 
 
 describe('GET /api/docs', () => {
