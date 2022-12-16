@@ -38,7 +38,9 @@ describe('GET /api/docs', () => {
         await request(app).get('/api/docs')
             .expect(200)
             .then(async (res) => {
+                console.log('##############   res.body.title: ', res.body.title, '+', doc.title)
                 expect(res.body.title).toEqual(doc.title)
+
                 expect(res.body.text).toEqual(doc.text)
                 console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
     
