@@ -3,10 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const docRoutes = require('./routes/route');
 
-
-
 const app = express();
-
 
 // Middleware
 app.use(express.json());

@@ -16,7 +16,7 @@ beforeEach( async () =>
 afterEach( async () =>
 {
     await mongoose.connection.close();
-} );
+});
 
 
 const firstDoc = {

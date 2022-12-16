@@ -7,17 +7,17 @@ import Register from './pages/Register'
 function App() {
   return (
     <>
-      {/* <Router basename=process.env.BASENAME> */}
-      <Router>
-        <div className='container'>
-          <Header />
-          {/* some */}
-          <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/editor/:id' element={<Editor />} />
-            <Route path='/register' element={<Register />} />
-          </Routes>
-        </div>
+		{/* <Router basename=process.env.BASENAME> */}
+		<Router>
+			<div className='container'>
+			<Header />
+			{/* some */}
+			<Routes>
+				<Route path='/' element={<Dashboard />} />
+				<Route path='/editor/:id' element={<Editor />} />
+				<Route path='/register' element={<Register />} />
+			</Routes>
+			</div>
       </Router>
     </>
   )
