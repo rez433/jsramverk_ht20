@@ -39,9 +39,9 @@ describe('GET /api/docs', () => {
             .expect(200)
             .then( (res) => {
                 console.log('##############   res.body.title: ', res.body, '+', doc.title)
-                expect(res.body.title).toEqual(doc.title)
+                expect(res.body.title).toBe(doc.title)
 
-                expect(res.body.text).toEqual(doc.text)
+                expect(res.body.text).toBe(doc.text)
                 console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
     
             })
