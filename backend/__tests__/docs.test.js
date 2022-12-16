@@ -29,7 +29,7 @@ const firstDoc = {
 
 describe('GET /api/docs', () => {
     it ('should return all docs and status code 200', async() => {
-        const doc = await Doc.create({
+        await Doc.create({
             title: firstDoc.title,
             text: firstDoc.text
         })
@@ -38,8 +38,6 @@ describe('GET /api/docs', () => {
         .get('/api/docs')
         .then(async (res) => {
             expect(res.status).toEqual(200)
-            // expect(res.body._id).toEqual(doc._id)
-            await console.log(`Document with id: ${res.body._id} and title: ${doc._id} created`)
         })
     })
 })
