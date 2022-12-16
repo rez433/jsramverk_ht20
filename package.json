@@ -4,7 +4,7 @@
   "description": "Collaborative text editor build with MERN stack",
   "main": "index.js",
   "scripts": {
-    "test": "jest --ci --testResultsProcessor=jest-junit ./backend --detectOpenHandles --coverage --config ./backend/jest.config.json  --testTimeout=10000",
+    "test": "jest --ci --testResultsProcessor=jest-junit backend --detectOpenHandles --coverage --config backend/jest.config.json  --testTimeout=10000",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
