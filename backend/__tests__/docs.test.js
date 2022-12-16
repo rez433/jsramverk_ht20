@@ -26,7 +26,7 @@ let firstDocId = '';
 describe('GET /api/docs', () => {
 
     it ('should return all docs and status code 200', async() => {
-        await Doc.create({
+        const doc = await Doc.create({
             title: "*** First Document Title  ***",
             text: "Using supertest to test POST endpoint"
         })
@@ -60,6 +60,7 @@ describe('GET /api/docs/:id', () => {
 
         const testDoc = await request(app).get(`/api/docs/${firstDoc.id}`);
         expect(testDoc.status).toEqual(200)
+        console.log(testDoc.body)
         expect(testDoc.body.title).toEqual(firstDoc.title)
     })
 })
