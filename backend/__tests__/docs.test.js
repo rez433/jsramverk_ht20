@@ -56,8 +56,10 @@ describe('GET /api/docs/:id', () => {
 
         await request(app)
         .get(`/api/docs/${doc._id}`)
-        .expect(testDoc.status).toEqual(200)
-        .expect(testDoc.body.title).toEqual(doc.title)
+        .then(async (res) => {
+            expect(res.status).toEqual(200)
+            expect(res.body.title).toEqual(doc.title)
+        })
     })
 })
 
