@@ -54,12 +54,10 @@ describe('GET /api/docs/:id', () => {
             text: firstDoc.text
         })
 
-        console.log('first doc id: ', doc._Id)
-        const testDoc = await request(app).get(`/api/docs/${doc._id}`);
-        console.log('### testDoc response: ###' , testDoc)
-
-        expect(testDoc.status).toEqual(200)
-        expect(testDoc.body.title).toEqual(doc.title)
+        await request(app)
+        .get(`/api/docs/${doc._id}`)
+        .expect(testDoc.status).toEqual(200)
+        .expect(testDoc.body.title).toEqual(doc.title)
     })
 })
 
