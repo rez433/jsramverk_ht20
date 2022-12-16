@@ -35,16 +35,26 @@ describe('GET /api/docs', () => {
             text: firstDoc.text
         })
     
-        await request(app).get('/api/docs')
-            .expect(200)
-            .then( (res) => {
-                console.log('##############   res.body.title: ', res.body.title, '+', doc.title)
-                expect(res.body.title).toBe(doc.title)
+        await request(app)
+        .get('/api/docs')
+        .then(async (res) => {
+            expect(res.status).toEqual(200)
+            expect(res.body.title).toBe(doc.title)
+            expect(res.body.text).toBe(doc.text)
+            console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
+        })
 
-                expect(res.body.text).toBe(doc.text)
-                console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
+
+
+            // .expect(res.body.title).toBe(doc.title)
+            // .then( async (res) => {
+            //     await console.log('##############   res.body.title: ', res.body.title, '+', doc.title)
+            //     expect(res.body.title).toBe(doc.title)
+
+            //     expect(res.body.text).toBe(doc.text)
+            //     console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
     
-            })
+            // })
     })
 })
 
