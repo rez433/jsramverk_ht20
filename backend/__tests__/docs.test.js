@@ -1,15 +1,17 @@
-require('dotenv').config();
 const mongoose = require( "mongoose" );
 const request = require( "supertest" );
 const Doc = require('../models/Docmnt');
 const {app} = require("../app");
 
 
-/* Connecting to the database before each test. */
+/* Connecting to the database before all test. */
 beforeEach( async () =>
 {
-    await mongoose.connect( process.env.MONGO_URI );
+    await mongoose.connect('mongodb://localhost/testDB',{
+        useNewUrlParser: true 
+    })
 });
+
 
 /* Closing database connection after each test. */
 afterEach( async () =>
@@ -19,11 +21,22 @@ afterEach( async () =>
 
 
 describe('GET /api/docs', () => {
-    it ('should return all docs and status code 200', async() => {
-        const resp = await request(app).get('/api/docs');
 
-        expect(resp.status).toBe(200);
-        return resp;
+    it ('should return all docs and status code 200', async() => {
+        await Doc.create({
+            title: "*** TESTING POST ENDPOINT ***",
+            text: "Using supertest to test POST endpoint"
+        })
+    
+        await request(app).get('/api/docs')
+            .expect(200)
+            .then(async (res) => {
+                expect(res.body._id).toBeTruthy()
+                expect(res.body.title).toBe(doc.title)
+                expect(res.body.text).toBe(doc.text)
+                console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
+    
+            })
     })
 })
 
