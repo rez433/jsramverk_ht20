@@ -19,16 +19,20 @@ afterEach( async () =>
 } );
 
 
-let firstDocId = '';
-
+const firstDoc = {
+    title: "*** First Document Title ***",
+    text: "Using supertest to test POST endpoint",
+    falseId: "634dcb3b881e578a2f7xxxx0",
+    n0ValidId: "falseId123",
+}
 
 
 describe('GET /api/docs', () => {
 
     it ('should return all docs and status code 200', async() => {
         const doc = await Doc.create({
-            title: "*** First Document Title  ***",
-            text: "Using supertest to test POST endpoint"
+            title: firstDoc.title,
+            text: firstDoc.text
         })
     
         await request(app).get('/api/docs')
@@ -44,26 +48,19 @@ describe('GET /api/docs', () => {
 })
 
 
-
-
-const firstDoc = {
-    id: firstDocId,
-    title: "*** First Document Title ***",
-    text: "Using supertest to test POST endpoint",
-    falseId: "634dcb3b881e578a2f7xxxx0",
-    n0ValidId: "falseId123",
-}
-
-
 describe('GET /api/docs/:id', () => {
     it ('should return a doc matching firstDoc.id and status code 200', async() => {
+        const doc = await Doc.create({
+            title: firstDoc.title,
+            text: firstDoc.text
+        })
 
-        console.log('first doc id: ', firstDocId)
-        const testDoc = await request(app).get(`/api/docs/${firstDoc.id}`);
+        console.log('first doc id: ', docId)
+        const testDoc = await request(app).get(`/api/docs/${doc.id}`);
         console.log('### testDoc response: ###' , testDoc)
 
         expect(testDoc.status).toEqual(200)
-        expect(testDoc.body.title).toEqual(firstDoc.title)
+        expect(testDoc.body.title).toEqual(doc.title)
     })
 })
 
