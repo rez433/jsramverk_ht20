@@ -37,7 +37,7 @@ describe('GET /api/docs', () => {
     
         await request(app).get('/api/docs')
             .expect(200)
-            .then(async (res) => {
+            .then( (res) => {
                 console.log('##############   res.body.title: ', res.body.title, '+', doc.title)
                 expect(res.body.title).toEqual(doc.title)
 
