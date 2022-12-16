@@ -27,7 +27,7 @@ describe('GET /api/docs', () => {
 
     it ('should return all docs and status code 200', async() => {
         await Doc.create({
-            title: "*** TESTING POST ENDPOINT ***",
+            title: "*** First Document Title  ***",
             text: "Using supertest to test POST endpoint"
         })
     
@@ -35,7 +35,6 @@ describe('GET /api/docs', () => {
             .expect(200)
             .then(async (res) => {
                 firstDocId = res.body._id;
-                expect(res.body._id).toBeTruthy()
                 expect(res.body.title).toBe(doc.title)
                 expect(res.body.text).toBe(doc.text)
                 console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
