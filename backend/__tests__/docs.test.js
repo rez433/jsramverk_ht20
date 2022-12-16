@@ -38,9 +38,8 @@ describe('GET /api/docs', () => {
         await request(app).get('/api/docs')
             .expect(200)
             .then(async (res) => {
-                firstDocId = res.body._id;
-                expect(res.body.title).toBe(doc.title)
-                expect(res.body.text).toBe(doc.text)
+                expect(res.body.title).toEqual(doc.title)
+                expect(res.body.text).toEqual(doc.text)
                 console.log(`Document with id: ${res.body._id} and title: ${res.body.title} created`)
     
             })
@@ -55,8 +54,8 @@ describe('GET /api/docs/:id', () => {
             text: firstDoc.text
         })
 
-        console.log('first doc id: ', docId)
-        const testDoc = await request(app).get(`/api/docs/${doc.id}`);
+        console.log('first doc id: ', doc._Id)
+        const testDoc = await request(app).get(`/api/docs/${doc._id}`);
         console.log('### testDoc response: ###' , testDoc)
 
         expect(testDoc.status).toEqual(200)
