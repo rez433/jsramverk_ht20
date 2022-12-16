@@ -58,9 +58,11 @@ const firstDoc = {
 describe('GET /api/docs/:id', () => {
     it ('should return a doc matching firstDoc.id and status code 200', async() => {
 
+        console.log('first doc id: ', firstDocId)
         const testDoc = await request(app).get(`/api/docs/${firstDoc.id}`);
+        console.log('### testDoc response: ###' , testDoc)
+
         expect(testDoc.status).toEqual(200)
-        console.log(testDoc.body)
         expect(testDoc.body.title).toEqual(firstDoc.title)
     })
 })
