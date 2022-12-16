@@ -60,9 +60,7 @@ describe('GET /api/docs/:id', () => {
 
         const testDoc = await request(app).get(`/api/docs/${firstDoc.id}`);
         expect(testDoc.status).toEqual(200)
-        expect(testDoc.body._id).toEqual(firstDoc.id)
         expect(testDoc.body.title).toEqual(firstDoc.title)
-            
     })
 })
 
