@@ -1,6 +1,5 @@
 {
 	"testRegex": "((\\.|/*.)(test))\\.js?$",
 	"bail": 1,
-	"verbose": true,
-	"reporters": [ "default", "jest-junit" ]
+	"verbose": true
 }
