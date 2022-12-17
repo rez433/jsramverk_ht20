@@ -28,12 +28,3 @@ jobs:
   
     - run: npm install
     - run: npm test
-    
-    - name: Test Reporter
-      uses: dorny/test-reporter@v1.6.0
-      if: success() || failure()    # run this step even if previous step failed
-      with:
-        artifact: test-results            # artifact name
-        name: JEST Tests                  # Name of the check run which will be created
-        path: '*.xml'                     # Path to test results (inside artifact .zip)
-        reporter: jest-junit              # Format of test results
