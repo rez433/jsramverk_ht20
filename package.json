@@ -1,6 +1,6 @@
 {
   "name": "jsramverk-editor",
-  "version": "2.2.1",
+  "version": "2.4.0",
   "description": "Collaborative text editor build with MERN stack",
   "main": "index.js",
   "scripts": {
