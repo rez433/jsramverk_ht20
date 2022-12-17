@@ -42,18 +42,7 @@
   "devDependencies": {
     "concurrently": "^7.4.0",
     "jest": "^29.3.1",
-    "jest-junit": "^15.0.0",
     "nodemon": "^2.0.20",
     "supertest": "^6.3.3"
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "outputDirectory": ".",
-    "outputName": "junit.xml",
-    "uniqueOutputName": "false",
-    "classNameTemplate": "{classname}-{title}",
-    "titleTemplate": "{classname}-{title}",
-    "ancestorSeparator": " › ",
-    "usePathForSuiteName": "true"
   }
 }
