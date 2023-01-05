@@ -7,7 +7,6 @@
     "@reduxjs/toolkit": "^1.8.6",
     "axios": "^1.1.2",
     "bootstrap": "^5.2.2",
-    "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -22,17 +21,12 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "msw": "^0.49.2",
     "react-test-renderer": "^18.2.0"
-  },
-  "transformIgnorePatterns": {
-    "node_modules/(?!(axios|react-toastify))": "babel-jest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "deploy": "npm run build && rsync -av --delete build/ rere20@ssh.student.bth.se:www/editor"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [

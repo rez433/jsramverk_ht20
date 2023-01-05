@@ -5,7 +5,7 @@ A simple colaborative text editor built with Mongoose(mongodb), Expressjs, React
 
 
 ### Built With
-![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)  <img src="./rtl.png" width="48px" height="48px">
+![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)  <img src="./rtl.png" width="48px" height="48px" style="background-color:#f2f2f2; border-radius:12px">
 
 
 ## Run all commands from root directory!  
