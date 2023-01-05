@@ -6,7 +6,7 @@ Testing with Jest, SuperTest, Testing-Library.
 
 
 ### Built With
-![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)  <img src="./rtl.png" width="48px" height="48px" style="background-color:#f2f2f2; border-radius:12px">
+![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)  <img src="./rtl.png" width="44px" height="44px" style="border-radius:10px; border:2px solid #990000">
 
 
 ## Run all commands from root directory!  
