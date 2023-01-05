@@ -10,7 +10,6 @@
     ]
   },
   "scripts": {
-    "test": "jest --detectOpenHandles --coverage --config ./jest.config.json  --testTimeout=10000",
     "start": "node ./server.js",
     "server": "nodemon ./server.js"
   },

@@ -5,20 +5,24 @@ A simple colaborative text editor built with Mongoose(mongodb), Expressjs, React
 
 
 ### Built With
-[![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)](https://skills.thijs.gg)
+![Stacks](https://skills.thijs.gg/icons?i=mongodb,express,react,nodejs,jest)  <img src="./rtl.png" width="48px" height="48px">
 
 
+## Run all commands from root directory!  
+  
 
-## clone project and install all dependencies:
-1. clone the project and in root directory:  
+### clone project and install all dependencies: 
+
+1. clone the project and cd in root directory:  
 `npm i`  
-npm will install all packages even in subfolders "frontend" and "backend"
+npm installs all packages and dependencies, even for subfolders "frontend" and "backend"
 
 
-## Commands to run server:
+### Commands to run server:
 1. to run server  
-`npm run start`  
-and open "http://localhost:5000/api/docs" in your browser
+`npm start`  
+then open "http://localhost:5000/api/docs" in your browser   
+
 
 2. to run server with nodemon   
 `npm run server`  
@@ -28,6 +32,9 @@ and open "http://localhost:5000/api/docs" in your browser
 `npm run dev`  
 and open "http://localhost:3000/" in your browser
 
-## testing
-1. to run test with code-coverage:     
-`npm test`  
+### testing
+1. to run test for backend with code-coverage:     
+`npm run test`  
+
+2. to run test for frontend:  
+`npm run test_front`

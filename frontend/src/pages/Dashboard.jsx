@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
 
-	// const url = 'https://jsramverk-editor-rere20.azurewebsites.net/';
-	const url = 'http://localhost:5000';
+    const url = process.env.REACT_APP_API_URL;
 
 	const [docs, setDocs] = useState();
 	const navigate = useNavigate();
