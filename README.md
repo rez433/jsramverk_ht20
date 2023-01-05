@@ -1,7 +1,8 @@
 # TEXT EDITOR BUILT WITH MERN STACK
 
 ## About project
-A simple colaborative text editor built with Mongoose(mongodb), Expressjs, Reactjs and nodejs. Testing with Jest and SuperTest.
+A simple colaborative text editor built with Mongoose(mongodb), Expressjs, Reactjs and nodejs.   
+Testing with Jest, SuperTest, Testing-Library.
 
 
 ### Built With
